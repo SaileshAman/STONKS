@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>CONTACT</title>
+        <link rel="stylesheet" href="{% static '/css/show.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    </head> 
+    <body>
+        <section class="header">
+            <nav>
+                <a href="{% url 'home' %}"><img src="{% static '/images/03.png' %}"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li> <a href="{% url 'home' %}">HOME</a></li>
+                        <li> <a href="{% url 'about' %}">ABOUT</a></li>
+                        <li> <a href="{% url 'login' %}">LOGIN</a></li>
+                        <li> <a href="{% url 'terms' %}">TERMS</a></li>
+                        <li> <a href="{% url 'contact' %}">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+         
+        <div class="text-box">
+            <h1>STONKS</h1>
+            <p>Email: stonks@gmail.com<br>
+               Phone: 9313936625, 9052977742, 8007900202</p>
+            <a href="{% url 'home' %}" class="hero-btn">KNOW MORE</a>   
+        </div>    
+        </section>
+
+        <style>
+            .header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(75,0,130,0.5),rgba(255, 230, 7, 0.397)),url("{% static '/images/13.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+        </style>
+    </body>
+</html>

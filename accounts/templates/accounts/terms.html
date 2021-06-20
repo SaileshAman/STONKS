@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>TERMS</title>
+        <link rel="stylesheet" href="{% static '/css/terms.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    </head> 
+    <body>
+        <section class="header">
+            <nav>
+                <a href="{% url 'home' %}"><img src="{% static '/images/03.png' %}"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li> <a href="{% url 'home' %}">HOME</a></li>
+                        <li> <a href="{% url 'about' %}">ABOUT</a></li>
+                        <li> <a href="{% url 'login' %}">LOGIN</a></li>
+                        <li> <a href="{% url 'terms' %}">TERMS</a></li>
+                        <li> <a href="{% url 'contact' %}">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+         
+        <div class="text-box">
+            <h1>TERMS & CONDITIONS</h1>
+            <p>The following are the terms and conditions (the Terms and Conditions)
+                which govern the access to and use of the securities markets operated
+                by STONKS. By using the Services (as defined below), the Member (as defined below)
+                agrees to be bound by and comply with the present Terms and Conditions as amended from 
+                time to time. The Member will be deemed to have accepted these Terms and Conditions every time it uses 
+                the Services.
+                The Terms and Conditions may be amended, replaced or supplemented at any time by STONKS
+                and will be made available on STONKS’s website or sent by email or otherwise when agreed
+                with the Member. In the absence of any written objection and/or if the Member uses the Services, 
+                the Member shall be deemed to agree with the Terms and Conditions. STONKS shall use best efforts
+                to discuss with the Member, or a representative group of Market Members, prior to making any amendment
+                to this Agreement, the Policies or the Specifications (as defined below) that is likely to have a significant
+                impact on the Member. This preamble forms an integral and entire part of the Terms and Conditions and has a binding effect.</p>
+            <a href="{% url 'home' %}" class="hero-btn">KNOW MORE</a>   
+        </div>    
+        </section>
+        <style>
+            .header{
+                min-height: 100vh;
+                width: 100%;
+                background-image: linear-gradient(rgba(75,0,130,0.5),rgba(255, 230, 7, 0.397)),url("{% static '/images/13.jpg' %}");
+                background-position: center;
+                background-size: cover;
+                position: relative;
+
+            }
+        </style>
+    </body>
+</html>

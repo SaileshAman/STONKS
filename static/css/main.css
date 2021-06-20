@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Staatliches', cursive;
+}
+/*.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(75,0,130,0.5),rgba(255, 94, 0, 0.2)),url(STONKS/01.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}*/
+nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: gold;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background:orangered;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: rgb(248, 240, 166);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 50px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color:rgba(253, 247, 194, 0.918);
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+    border: 2px solid white;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    color:orangered;
+    border: 1px solid gold;
+    background: gold;
+    transition: 0.2s;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+}
+
+/*-------PROFILES--------*/
+
+.profiles{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    background-color:white ;
+    width: 100%;
+}
+.profiles h2{
+    font-size: 80px;
+    font-weight: 600;
+    color:  rgb(75,0,130);
+}
+
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pro-col{
+    height: 150px;
+    flex-basis: 49%;
+    background: rgba(81, 0, 128, 0.5);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 25px 25px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+.pro-col ul li{
+    list-style: none;
+}
+.pro-col ul li a{
+    text-decoration: none;
+}
+h3{
+    text-align:center;
+    font-size:40px;
+    margin: 10px 0;
+    color: white;
+}
+p{
+    color: white;
+    text-align: center;
+}
+.pro-col:hover{
+    box-shadow: 0 0 20px 0px orangered;
+}
+
+
+/*---------GLOBAL OUTREACH-----------*/
+
+.global{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+h4{
+    font-size: 80px;
+    font-weight: 600;
+    color:  rgb(75,0,130);
+}
+
+.stex{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stex img{
+    width: 100%;
+    display:block;
+}
+.layer{
+    background: transparent;
+    height: 90.40%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+}
+.layer:hover{
+    background:  rgba(75,0,130,0.6);
+}
+
+.site{
+    margin-top: 10%;
+}
+.site h5{
+     color: rgb(75,0,130);
+     font-size: 30px;
+ }
+.site h6{
+    color: rgb(75,0,130);
+    font-size: 30px;
+}
+
+.site ul li{
+    list-style: none;
+}
+.site ul li a{
+    text-decoration: none;
+}
+.site ul li::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background:orangered;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+.site ul li:hover::after{
+    width: 100%;
+}
+
+/*----------CONTACT------------*/
+
+/*.ctu{
+    margin: 100px auto;
+    width: 1500px;
+    background-image: linear-gradient(rgba(75,0,130,0.4),rgba(255, 220, 66, 0.3)),url(STONKS/04.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}*/
+
+.ctu h6{
+    color: gold;
+    margin-bottom: 40px;
+    padding: 0;
+    font-size: 60px;
+}
+.ctu p{
+    font-size: 40px;
+    color: honeydew;
+}

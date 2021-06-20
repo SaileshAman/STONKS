@@ -1,0 +1,164 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>STONKS</title>
+        <link rel="stylesheet" href="{% static '/css/main.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    </head> 
+    <body>
+        <section class="header">
+            <nav>
+                <a href="{% url 'home' %}"><img src="{% static '/images/03.png' %}"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li> <a href="{% url 'home' %}">HOME</a></li>
+                        <li> <a href="{% url 'about' %}">ABOUT</a></li>
+                        <li> <a href="{% url 'login' %}">LOGIN</a></li>
+                        <li> <a href="{% url 'terms' %}">TERMS</a></li>
+                        <li> <a href="{% url 'contact' %}">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <style>
+                .header{
+                    min-height: 100vh;
+                    width: 100%;
+                    background-image: linear-gradient(rgba(75,0,130,0.5),rgba(255, 94, 0, 0.2)),url("{% static 'images/01.jpg' %}");
+                    background-position: center;
+                    background-size: cover;
+                    position: relative;
+                }
+            </style>
+         
+        <div class="text-box">
+            <h1>ONE PLATFORM FOR ALL THE INVESTMENTS</h1>
+            <p>Stonks is aimed to focus on ease of access<br>
+               all the sellers, buyers & brokers at one destination.</p>
+            <a href="" class="hero-btn">KNOW MORE</a>   
+        </div>    
+
+        </section>
+
+
+<!-------PROFILES-------->
+
+
+        <section class="profiles">
+            <h2>PROFILES</h2>
+            <div class="row">
+                <!----<div class="pro-col">
+                    <ul>
+                        <li>
+                            <a href="">
+                    <h3>SELLERS</h3>
+                    <p>Selling your stocks made easier. Buyers are always ready to invest.</p>
+                            </a>
+                        </li>
+                    </ul>    
+                </div>------->
+                <div class="pro-col">
+                    <ul>
+                        <li>
+                            <a href="">
+                    <h3>CLIENTS</h3>
+                    <p>Investment opportunities from all the companies you wish. Invest today.</p>
+                            </a>
+                        </li>
+                    </ul>    
+                </div>
+                <div class="pro-col">
+                    <ul>
+                        <li>
+                            <a href="">
+                    <h3>BROKERS</h3>
+                    <p>Showcase your knowledge in stocks by brokerage. New users are always in inflow.</p>
+                            </a>
+                        </li>
+                    </ul>    
+                </div>
+            </div>
+            
+        </section>
+
+
+<!-----GLOBAL OUTREACH--->
+
+
+        <section class="global">
+            <h4>Global Connections</h4>
+            <p>We are connected to all the globally renowned Stock Exchanges</p>
+            <div class="row">
+                <div class="stex">
+                    <img src="{% static '/images/NYSE.png' %}">
+                    <div class="layer">  
+                    </div>
+                    <div class="site">
+                        <ul>
+                            <li>
+                                <a href="https://www.nyse.com/index">
+                        <h5>NYSE</h5>
+                                </a>
+                            </li>
+                        </ul>        
+                    </div>
+                </div>
+                <div class="stex">
+                    <img src="{% static '/images/LSE.png' %}">
+                    <div class="layer">
+                    </div>
+                    <div class="site">
+                        <ul>
+                            <li>
+                                <a href="https://www.londonstockexchange.com/">
+                        <h5>LONDON STOCK EXCHANGE</h5>
+                                </a>
+                            </li>
+                        </ul>        
+                    </div>
+                </div>    
+                <div class="stex">
+                    <img src="{% static '/images/NASDAQ.png' %}">
+                    <div class="layer">
+                    </div>
+                    <div class="site">
+                        <ul>
+                            <li>
+                                <a href="https://www.nasdaq.com/">
+                        <h5>NASDAQ</h5>
+                                </a>
+                            </li>
+                        </ul>        
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+
+ <!---------------CONTACT---------------->
+
+ 
+        <section class="ctu">
+            <h6>CONTACT US</h6>
+            <p>stonks@gmail.com</p>
+        </section>
+        <style>
+            .ctu{
+                margin: 100px auto;
+                width: 1500px;
+                background-image: linear-gradient(rgba(75,0,130,0.4),rgba(255, 220, 66, 0.3)),url("{% static '/images/04.jpg' %}");
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                border-radius: 10px;
+                text-align: center;
+                padding: 100px 0;
+            }
+        </style>
+
+    </body>
+</html>
