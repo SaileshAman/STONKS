@@ -43,9 +43,9 @@ class Client_Stock(models.Model):
         return f"{self.CID.Name} ---> {self.SID.Name}"
 
 class Client_Broker(models.Model):
-    PID = models.ForeignKey(Client, on_delete = models.CASCADE)
+    CID = models.ForeignKey(Client, on_delete = models.CASCADE)
     BID = models.ForeignKey(Broker, on_delete = models.CASCADE)
     data_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.PID.Name} ---> {self.Name}"
+        return f"{self.CID.Name} ---> {self.BID.Name}"

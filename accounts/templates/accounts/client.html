@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Client</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/client.css' %}">
+</head>
+<body>
+    <section class="header">
+	<nav>
+        <a href="{% url 'home' %}"><img src="{% static '/images/03.png' %}"></a>
+        <div class="nav-links">
+            <ul>
+                <li> <a href="{% url 'home' %}">HOME</a></li>
+                <li> <a href="{% url 'about' %}">ABOUT</a></li>
+                <li> <a href="{% url 'login' %}">LOGIN</a></li>
+                <li> <a href="{% url 'terms' %}">TERMS</a></li>
+                <li> <a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+	<div class="container-fluid">
+        <br>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="card card-body">
+                    <h5>Client Name: {{client.Name}}</h5>
+                    <a class="btn btn-outline-info  btn-sm btn-block" href="">Update Account</a>
+                    <a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Account</a>
+                </div>
+            </div>
+        
+            <div class="col-md">
+                <div class="card card-body">
+                    <h5>Client Info</h5>
+                    <p>EMail: {{client.Email}}</p>
+                    <p>PAN: {{client.PAN}}</p>
+                    <p>Portfolio ID: {{client.Portfolio_ID}}</p>
+                </div>
+            </div>
+        
+            <div class="col-md">
+                <div class="card card-body">
+                    <h5>Total Assets:</h5>
+                    <hr>
+                    <h1 style="text-align: center;padding: 10px">{{assets}}</h1>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--<br>
+        <div class="row">
+            <div class="col">
+                <div class="card card-body">
+                    <form method="get">
+                        {{myFilter.form}}
+                    <button class="btn btn-primary" type="submit">Search</button>
+                  </form>
+                </div>
+            </div>
+            
+        </div>
+        <br>-->
+        
+        <div class="row">
+            <div class="col-md">
+                <div class="card card-body">
+                    <table class="table table-sm">
+                        <tr>
+                            <th>Name</th>
+                            <th>Company</th>
+                            <th>Share Price</th>
+                            <th>Shares Owned</th>
+                        </tr>
+                        
+                        {% for S in stocks %}
+
+				        <tr>
+					    <td>{{S.SID.Name}}</td>
+					    <td>{{S.SID.Company}}</td>
+					    <td>{{S.SID.Price}}</td>
+					    <td>{{S.Shares}}</td>
+				        </tr>
+				        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <style>
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(40, 11, 65, 0.897),rgba(255, 220, 66, 0.5)),url("{% static '/images/16.jpg' %}");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+    </style>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
